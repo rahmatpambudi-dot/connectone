@@ -353,7 +353,7 @@
         </div>
         <div class="metric-card">
           <div class="metric-label">Last Update</div>
-          <div class="metric-value" style="font-size:18px">Mei 2026</div>
+          <div class="metric-value" style="font-size:18px" id="last-update"></div>
           <div class="metric-sub">Data terkini</div>
         </div>
       </div>
@@ -433,4 +433,9 @@
   </div>
 
 </body>
+<script>
+  const now = new Date();
+  const label = now.toLocaleDateString('id-ID', { month: 'long', year: 'numeric' });
+  document.getElementById('last-update').textContent = label;
+</script>
 </html>
